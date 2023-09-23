@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adivina el número</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6a0572; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .juego-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #6a0572; 
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2, p {
+            text-align: center;
+            color: black; 
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #6a0572; 
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #44056e; 
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #fff; 
+            color: #6a0572; 
+            border: 2px solid #6a0572; 
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px; 
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #6a0572;
+            color: #fff; 
+            border-color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <div class="juego-container">
+        <h2>Adivina El Numero</h2>
+        <p>El programa ha elegido un número entre 1 y 100. ¡Adivina cuál es!</p>
+        <input type="number" id="number" min="1" max="100">
+        <button onclick="adivinar()">Adivinar</button>
+        <button onclick="window.location.href='index.html'">Volver al Menú Principal</button>
+    </div>
+
+    <script src="adivinar.js"></script>
+</body>
+</html>
